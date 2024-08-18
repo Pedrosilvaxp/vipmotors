@@ -1,0 +1,67 @@
+:root {
+    --fonte1: 'Open Sans';
+    --fonte2: Impact;
+    --cor1: #F51344;
+    --cor2: #121212;
+}
+
+/* BODY */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Form page */
+.shadow-container-form {
+    padding: 0px 15px 3em;
+    width: 600px;
+    min-width: auto;
+    box-shadow: 30px 0px 60px black;
+    border-radius: 50px;
+    background-color: var(--cor2);
+}
+.form {
+    text-align: center;
+}
+form {
+    margin: auto;
+    max-width: 330px;
+    min-width: auto;
+    color: white;
+}
+p {
+    margin: 20px 0px;
+}
+section.form {
+    max-width: 400px;
+    min-width: auto;
+}
+input {
+    background-color: transparent;
+    border: 2px solid var(--cor1);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 8px;
+}
+input.buttons {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 120px;
+    transition-duration: .3s;
+}
+.buttons:hover {
+    background-color: white;
+    font-weight: bold;
+    color: var(--cor1);
+}
+::placeholder {
+    font-family: var(--fonte1);
+    color: white;
+}
+@media (max-width: 350px) {
+    .shadow-container-form {
+        border-radius: 0px;
+    }
+}

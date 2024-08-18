@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>VIPMotors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="imagens/logo-p.png" class="logo" alt="logo">
+            <ul class="navdesktop">
+                <li><a href="#" onclick="voltar()">Inicio</a></li>
+                <li><a href="#" onclick="carros()">Carros</a></li>
+                <li><a href="#" onclick="ofertas()">Ofertas</a></li>
+                <li><a href="#" onclick="sobre()">Porque nós</a></li>
+            </ul>
+
+            <ul class="navdesktop">
+                <li><a href="login.html" class="login"><i class='bx bxs-log-in'></i>Entrar</a></li>
+            </ul>
+
+            <!-- NAV MOBILE -->
+            <div class="menu-btn">
+                <div class="menu-row"></div>
+                <div class="menu-row"></div>
+                <div class="menu-row"></div>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#" onclick="voltar()">Inicio</a></li>
+                <li><a href="#" onclick="carros()">Carros</a></li>
+                <li><a href="#" onclick="ofertas()">Ofertas</a></li>
+                <li><a href="#" onclick="sobre()">Porque nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="poster">
+            <div class="poster-item">
+                <img src="imagens/logo-p.png" class="logo" alt="Logo da VIPMOTORS">
+                <h1>VIPMOTORS</h1>
+                <p>Vem pra melhor concessionária da região!</p>
+                <p>Com os melhores carros premium. Preço que cabe no seu bolso!</p>
+            </div>
+
+            <div class="poster-item">
+                <img src="imagens/civic-poster.png" class="car-image" alt="Foto de carro civic">
+            </div>
+
+            <div class="circle-lateral"></div>
+        </section>
+
+        <section class="fitas">
+        </section>
+
+        <h1 class="behind-shadow cars">NOSSOS CARROS</h1>
+        <section class="shadow-container">
+            <p class="search">
+
+                <input type="search" name="pesqu" placeholder="Seu carro" value="" id="search" list="cars-list">
+                <datalist id="cars-list">
+                    <option>Civic</option>
+                    <option>BMW</option>
+                    <option>Hilux</option>
+                </datalist>
+                <a href="#" class="search-btn"><i class='bx bx-search' ></i></a>
+
+                <p class="search">
+                    <input type="button" class="filter-btn" onclick="filtrar(1)" value="Novos">
+
+                    <input type="button" class="filter-btn" onclick="filtrar(2)" value="Usados">
+
+                    <input type="button" class="filter-btn" onclick="filtrar(3)" value="Todos">
+                </p>
+            </p>
+            
+            <div class="cars-container">
+                <div class="cars-item novo">
+                    <img src="imagens/civic.png" alt="Foto ilustrativa de carro">
+                    <h2>Civic G10</h2>
+                    <p class="price">
+                        R$ 129.390
+                    </p>
+                    <p>2.0 FLEXZONE EXL 4P CVT</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+                <div class="cars-item novo">
+                    <img src="imagens/corola.png" alt="Foto ilustrativa de carro">
+                    <h2>Corolla</h2>
+                    <p class="price">
+                        R$ 120.390
+                    </p>
+                    <p>2.0 VVT-IE FLEX XEI DIRECT SHIFT</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+                <div class="cars-item novo">
+                    <img src="imagens/hilux.png" alt="Foto ilustrativa de carro">
+                    <h2>Hilux</h2>
+                    <p class="price">
+                        R$ 375.390
+                    </p>
+                    <p>2.8 SRV 4X4 CD 16V DIESEL 4P AUTO</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+                
+                <div class="cars-item usado">
+                    <img src="imagens/bmw.png" alt="Foto ilustrativa de carro">
+                    <h2>BMW 320i</h2>
+                    <p class="price">
+                        R$ 129.390
+                    </p>
+                    <p>2.0 FLEXZONE EXL 4P CVT</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+                <div class="cars-item usado">
+                    <img src="imagens/audia5.png" alt="Foto ilustrativa de carro">
+                    <h2>AUDI A5</h2>
+                    <p class="price">
+                        R$ 120.390
+                    </p>
+                    <p>2.0 VVT-IE FLEX XEI DIRECT SHIFT</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+                <div class="cars-item usado">
+                    <img src="imagens/mcbc200.png" alt="Foto ilustrativa de carro">
+                    <h2>Mercedes C200</h2>
+                    <p class="price">
+                        R$ 375.390
+                    </p>
+                    <p>2.8 SRV 4X4 CD 16V DIESEL 4P AUTO</p>
+                    <p><a href="#" class="buy">Ver parcelas</a></p>
+                </div>
+            </div>
+        </section>
+        <!-- End of Cars -->
+
+        <section class="fitas">
+        </section>
+
+        <!-- Banner oferts -->
+        <h1 class="behind-shadow oferts">NOSSAS OFERTAS</h1>
+        <section class="shadow-container banner-ofert">
+            <div>
+                <img src="imagens/logo-mercedes.png" class="logo-mercedes" alt="">
+            </div>
+            <div class="banner-center">
+                <p>Na compra de uma Mercedes</p>
+                <p>Ganhe até <strong>30%</strong> de desconto!</p>
+            </div>
+            <div>
+                <a href="#" class="offert">APROVEITE!</a>
+            </div>
+        </section>
+        <section class="shadow-container banner-ofert">
+            <div>
+                <img src="imagens/logo-BMW.png" alt="">
+            </div>
+            <div class="banner-center">
+                <p>Na compra de uma BMW</p>
+                <p>Ganhe até <strong>10%</strong> de desconto!</p>
+            </div>
+            <div>
+                <a href="#" class="offert">APROVEITE!</a>
+            </div>
+        </section>
+        <section class="shadow-container banner-ofert">
+            <div>
+                <img src="imagens/logo-audi.png" class="audi-logo" alt="">
+            </div>
+            <div class="banner-center">
+                <p>Na compra de um AUDI</p>
+                <p>Ganhe até <strong>20%</strong> de desconto!</p>
+            </div>
+            <div>
+                <a href="#" class="offert">APROVEITE!</a>
+            </div>
+        </section>
+
+        <section class="fitas">
+        </section>
+
+        <h1 class="behind-shadow sobre">Porque nós</h1>
+        <section class="shadow-container sobre">
+            <article class="sobre-item">
+                <h2>Segurança</h2>
+                <p>A segurança é uma prioridade inegociável em nossa concessionária. Nós sabemos que, ao adquirir um veículo, a integridade de nossos clientes e suas famílias está em jogo. Por isso, garantimos que todos os carros disponíveis no nosso estoque passam por um rigoroso processo de inspeção e testes, assegurando que cada veículo atenda aos mais altos padrões de segurança. Trabalhamos apenas com marcas que têm um compromisso comprovado em produzir automóveis que priorizam a proteção do motorista e dos passageiros.</p>
+            </article>
+            <article class="sobre-item">
+                <h2>Vem pra melhor!</h2>
+                <p>Na nossa concessionária, acreditamos que cada cliente merece uma experiência única e personalizada ao adquirir o seu veículo. Com anos de atuação no mercado automotivo, somos reconhecidos por nossa transparência e comprometimento em oferecer apenas os melhores modelos, novos e seminovos. Nosso objetivo é garantir que você encontre o carro perfeito que se encaixe no seu estilo de vida e necessidades, sempre com um excelente custo-benefício</p>
+            </article>
+            <article class="sobre-item">
+                <h2>Parceria</h2>
+                <p>Em nossa concessionária, acreditamos que a união faz a força, e por isso, estabelecemos parcerias estratégicas com as melhores marcas e fornecedo3res do mercado automotivo. Essas colaborações nos permitem oferecer um portfólio diversificado de veículos que atende a todas as preferências e necessidades, garantindo qualidade, tecnologia e inovação. Ao trabalhar diretamente com os fabricantes, conseguimos preços competitivos e acesso às últimas lançamentos e novidades do setor</p>
+            </article>
+        </section>
+
+        <!-- Back btn -->
+        <a href="#" onclick="voltar()" class="back-btn"><i class='bx bx-chevron-up'></i></a>
+    </main>
+    <!-- END OF MAIN -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-item">
+                <h2>Política</h2>
+                <a href="#">Política de privacidade</a>
+                <a href="#">FAQ (Perguntas frequentes)</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Blog ou Artigos</a>
+            </div>
+            <div class="footer-item">
+                <h2>Links</h2>
+                <a href="#">Inicio</a>
+                <a href="#">Carros</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Porque nós</a>
+            </div>
+            <div class="footer-item">
+                <h2>Vender</h2>
+                <a href="#">Vender carro</a>
+                <a href="#">Vender moto</a>
+                <a href="#">Gerenciar meus anúncios</a>
+                <a href="#">Comparar veículos</a>
+            </div>
+        </div>
+
+        <div class="footer-item-end">
+            <img src="imagens/logo-p.png" alt="Logo da vipmotors">
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/pedrosilvalk/" target="_blank">Pedro Nascimento</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

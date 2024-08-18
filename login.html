@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIPMotors - Login</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="shadow-container-form form">
+        <img src="imagens/logo-p.png" alt="">
+        <form action="main.py" autocomplete="on" method="post">
+            <p>
+                <label for="iemail">Email:</label>
+                <input type="email" name="email" id="iemail" placeholder="Seu email" required minlength="5" maxlength="20" autocomplete="email">
+            </p>
+            <p>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha" placeholder="Sua senha" required minlength="8" maxlength="20" autocomplete="new-password">
+            </p>
+            <p>
+                <input type="reset" value="Limpar" class="buttons">
+                <input type="submit" value="Enviar" class="buttons">
+            </p>
+        </form>
+    </section>
+</body>
+</html>

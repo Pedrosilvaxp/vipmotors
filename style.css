@@ -1,0 +1,452 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {margin: 0; padding: 0;}
+
+:root {
+    --fonte1: 'Open Sans';
+    --fonte2: Impact;
+    --cor1: #F51344;
+    --cor2: #121212;
+}
+
+/* BODY */
+body {
+    background-color: #121212;
+    font-family: var(--fonte1);
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: -0px;
+    border-bottom: 1px solid var(--cor1);
+    color: white;
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 20px var(--cor2);
+    transition: 0.3s ease-in-out;
+    background: rgba(18, 18, 18, 0.1);
+    z-index: 10;
+    opacity: 0.93;
+    margin-bottom: 2em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 20px;
+}
+nav a {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    transition-duration: .3s;
+}
+nav a:hover {
+    color: var(--cor1);
+}
+.navdesktop {
+    column-gap: 40px;
+}
+.login {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/* NAV Mobile */
+.menu-btn, .menu-list {
+    display: none;
+    cursor: pointer;
+}
+.menu-row {
+    width: 30px;
+    margin: 6px;
+    border: 1px solid white;
+}
+
+@media (max-width: 580px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navdesktop {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+}
+.menu-list {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background-color: var(--cor2);
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+}
+.menu-list a {
+    margin: 0px 10px;
+    padding: 5px;
+}
+.menu-list.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    transform: translateX(0);
+}
+
+/* MAIN */
+main {
+    color: white;
+}
+
+/* Poster */
+.poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+.poster h1 {
+    font-family: var(--fonte2);
+    font-size: 6em;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 3px var(--cor2);
+}
+.poster .logo {
+    width: 120px;
+}
+.poster img {
+    object-fit: cover;
+    position: relative;
+    width: 490px;
+    z-index: 2;
+}
+.poster-item {
+    text-align: center;
+}
+.poster p {
+    font-size: 18px;
+    text-shadow: 2px 2px 3px var(--cor2);
+    margin-bottom: 3em;
+}
+.circle-lateral {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 24vh;
+    right: -10vw;
+    z-index: 1;
+    border-radius: 10% 0px 0px 50%;
+    background-color: #080808;
+    border: 1px solid var(--cor1);
+}
+@media (max-width: 505px) {
+    .poster h1 {
+        font-size: 3em;
+    }
+}
+@media (max-width: 630px) {
+    .poster .car-image {
+        width: 300px;
+    }
+}
+
+/* Logo */
+.fitas {
+    background: url('imagens/logo-p.png');
+    margin-top: 7em;
+    height: 70px;
+}
+
+/* Cars */
+h1.behind-shadow {
+    font-size: 6em;
+    margin: 0px 30px -30px;
+    position: relative;
+}
+section.shadow-container {
+    box-shadow: 30px 0px 60px black;
+    border-radius: 50px;
+    padding: 70px 0px 3em;
+    position: relative;
+    background-color: var(--cor2);
+    max-width: 1300px;
+    min-width: auto;
+    margin: auto;
+}
+.shadow-container p.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 18px;
+    padding: 0px 0px 20px;
+    column-gap: 13px;
+    box-shadow: 0px 2px 3px black;
+    text-align: center;
+    margin: 0px 0px 20px;
+}
+input#search {
+    background-color: transparent;
+    border: 1px solid var(--cor1);
+    border-radius: 5px;
+    max-width: 310px;
+    min-width: auto;
+    color: white;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 18px;
+    transition-duration: .3s;
+}
+.search-btn {
+    border-radius: 5px;
+    padding: 7px 7px 7px 8px;
+    border: 1px solid var(--cor1);
+    transition-duration: .3s;
+}
+.search-btn:hover {
+    background-color: white;
+    color: var(--cor1);
+}
+/* Filter buttons */
+.filter-btn {
+    transition-duration: .3s;
+    border-radius: 5px;
+    font-family: var(--fonte1);
+    font-size: 17px;
+    font-weight: bold;
+    border: 0px solid;
+    padding: 10px;
+    cursor: pointer;
+}
+.filter-btn:hover {
+    background-color: var(--cor1);
+    color: white;
+}
+.cars-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-top: 5em;
+}
+.cars-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 12px;
+    border: 1px solid var(--cor1);
+    padding: 0px 20px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px black;
+    width: 310px;
+    height: 460px;
+}
+.cars-item img {
+    width: 100%;
+}
+.cars-item p {
+    font-size: 17px;
+    margin: 0px 0px 20px;
+}
+p.price {
+    margin: 10px 0px 0px;
+    font-size: 22px;
+}
+.cars-item a {
+    background-color: var(--cor1);
+    border-radius: 6px;
+    margin: 6px;
+    padding: 12px;
+    transition-duration: .3s;
+}
+.cars-item a:hover {
+    background-color: white;
+    font-weight: bold;
+    color: var(--cor2);
+}
+
+
+/* Oferts */
+section.banner-ofert {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    background: #F51344 ;
+    height: 200px;
+    color: white;
+    text-align: center;
+}
+.banner-ofert img {
+    width: 200px;
+    height: 200px;
+}
+.logo-mercedes {
+    object-fit: cover;
+}
+img.audi-logo {
+    width: 260px;
+}
+div.banner-center {
+    max-width: 320px;
+    height: 200px;
+    opacity: 0.90;
+}
+.banner-ofert p {
+    font-size: 1.4em;
+}
+.banner-ofert strong {
+    font-size: 4em;
+    display: block;
+}
+a.offert {
+    font-size: 2.8em;
+    font-weight: bolder;
+    color: white;
+    transition-duration: .3s;
+}
+.offert:hover {
+    font-size: 3em;
+}
+
+/* Porque nós */
+section.sobre {
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+.sobre-item {
+    max-width: 330px;
+    min-width: auto;
+    padding: 14px;
+}
+section.sobre article {
+    margin: 0px;
+}
+
+/* Back btn */
+.back-btn i {
+    position: fixed;
+    bottom: 5vh;
+    right: 7vw;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--cor1);
+    font-size: 70px;
+}
+
+/* Tags and texts */
+article, section {
+    margin-bottom: 8em;
+}
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    font-family: var(--fonte1);
+    margin-bottom: 2em;
+}
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.sobre p {
+    line-height: 1.5em;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+i {
+    color: var(--cor1);
+    font-size: 32px;
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+    a.offert {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 485px) {
+    h1.behind-shadow {
+        font-size: 3.5em;
+    }
+    .back-btn i {
+        font-size: 50px;
+    }
+}
+@media (max-width: 670px) {
+    header {
+        margin-bottom: 0;
+    }
+    .login {
+        display: none;
+    }
+    input#search {
+        width: 180px;
+        padding: 11px;
+    }
+    .search-btn {
+        padding: 3px 3px 3px 4px;
+    }
+}
+@media (max-width: 1080px) {
+    section.banner-ofert { 
+        height: auto;
+    }
+    .circle-lateral {
+        display: none;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    border-top: 2px solid var(--cor1);
+    margin-top: 15em;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.footer-flex {
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    max-width: 310px;
+    min-width: auto;
+}
