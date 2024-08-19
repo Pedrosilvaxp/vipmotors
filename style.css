@@ -290,10 +290,12 @@ section.banner-ofert {
     justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 30px;
-    background: #F51344 ;
     height: 200px;
     color: white;
     text-align: center;
+}
+section.banner-bmw {
+    background-color: #2D86B1;
 }
 .banner-ofert img {
     width: 200px;
