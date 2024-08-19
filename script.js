@@ -71,23 +71,18 @@ const carroUsado = document.querySelectorAll('.usado');
 const carrosd = document.querySelectorAll('.cars-item');
 
 function filtrar(call) {
-    if (call == 1) {
-        carroUsado.forEach((ele) => {
-            ele.style.display = 'none';
-        });
-        carroNovo.forEach((ele) => {
-            ele.style.display = 'inherit';
-        });
-    }
-    if (call == 2) {
-        carroNovo.forEach((ele) => {
-            ele.style.display = 'none';
-        });
-        carroUsado.forEach((ele) => {
-            ele.style.display = 'inherit';
-        });
-    }
-    if (call == 3) {
+    const mostrarNovo = call === 1;
+    const mostrarUsado = call === 2;
+
+    carroNovo.forEach((ele) => {
+        ele.style.display = mostrarNovo ? 'inherit' : 'none';
+    });
+
+    carroUsado.forEach((ele) => {
+        ele.style.display = mostrarUsado ? 'inherit' : 'none';
+    });
+
+    if (call === 3) {
         carrosd.forEach((ele) => {
             ele.style.display = 'inherit';
         });
